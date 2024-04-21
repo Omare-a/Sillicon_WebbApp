@@ -1,0 +1,76 @@
+﻿@model SubscribeModel
+
+
+<section id="subscribe">
+    <div class="container">
+        <div class="title">
+            <h1>Don't Want to Miss Anything?</h1>
+            <img src="~/images/arrows.svg" alt="">
+        </div>
+        <form method="post" asp-action="Subscribe" asp-controller="Default">
+            <div class="sing-up">
+                <h5>Sign up for Newsletters</h5>
+                <div class="options">
+                    <div class="input">
+                        <div class="input-group">
+                            <input asp-for="DailyNewsLetter">
+                            <label asp-for="DailyNewsLetter"></label>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <div class="input-group">
+                            <input asp-for="AdvertisingUpdates">
+                            <label asp-for="AdvertisingUpdates"></label>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <div class="input-group">
+                            <input asp-for="WeekinReview">
+                            <label asp-for="WeekinReview"></label>
+                        </div>
+                    </div>
+                    <div class="input">
+						<div class="input-group">
+                            <input asp-for="EventUpdates">
+                            <label asp-for="EventUpdates"></label>
+						</div>
+                    </div>
+
+                    <div class="input">
+                        <div class="input-group">
+                            <input asp-for="StartupsWeekly">
+                            <label asp-for="StartupsWeekly"></label>
+                        </div>
+                        
+                    </div>
+                    <div class="input">
+                        <div class="input-group">
+                            <input asp-for="Podcasts">
+                            <label asp-for="Podcasts"></label>
+                        </div>
+         
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-email">
+                <div class="input-group">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input asp-for="Email">
+                </div>
+                <button type="submit" class="btn btn-theme">Subscribe *</button>
+                <a class="btn-theme-s" href="#">Learn more<i class="fa-regular fa-arrow-right"></i></a>
+            </div>
+            @if (!string.IsNullOrEmpty(TempData["StatusMassage"]?.ToString()))
+            {
+                <span class="status-massage">@TempData["StatusMassage"]</span>
+            }
+            else
+            {
+                <span class="status-massage">* Yes, I agree to the <a href="">terms</a> and <a href="">privacy policy.</a></span>
+            }
+        </form>
+    </div>
+</section>
+
+
