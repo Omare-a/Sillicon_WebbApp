@@ -1,0 +1,42 @@
+#tools{
+    padding: 80px 0;
+
+    .container{
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        .tool-features{
+            margin-top: 40px;
+            display: grid;
+            justify-content: left;
+            text-align: left;
+            @include lg{
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+
+            .box{
+                padding: 20px;
+                transition: all 0.15s ease-in-out;
+
+                &:hover{
+                    transition: all 0.15 ease-in-out;
+                    cursor: pointer;
+                    background-color: $white;
+                    @include shadow-m;
+                }
+                img{
+                    margin-bottom: 20px;
+                    border-radius: 8px;
+                }
+                h5{
+                    @include h5;
+                }
+                p{
+                    @include text-m;
+                }
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,45 @@
+#content{
+
+    .container{
+        display: flex;
+        align-items: center;
+        column-gap: 120px;
+        justify-content: center;
+
+
+        .task{
+            display: inline-block;
+            h2{
+                @include h2;
+            }
+            ul{
+                margin-top: 20px;
+                @include text-m;
+                display: inline;
+                li{
+                    list-style-type: none;
+                    padding-top: 10px;
+                    i{
+                        padding-right: 10px;
+                        color: $info;
+
+                    }
+                }
+            }
+            .btn-theme-s{
+                margin-top: 50px;
+                display: inline-block;
+
+                i{
+                    display: inline;
+                    align-items: center;
+                    justify-content: center;
+                    padding-left: 10px;
+                    font-size: 12px;
+                }
+            }
+            
+        
+        }
+    }
+}

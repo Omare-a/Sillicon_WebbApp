@@ -1,0 +1,126 @@
+﻿#apps {
+    background-color: $gray-100;
+    padding: 80px 0;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 100px;
+
+        .download {
+            display: inline-block;
+
+            h2 {
+                @include h2;
+                width: 60%;
+            }
+
+            .app-store {
+                display: grid;
+                padding-top: 30px;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto;
+                grid-template-areas: "review review" "text button";
+
+                .reviews-apple {
+                    grid-area: review;
+                    display: inline-block;
+                    padding-bottom: 10px;
+
+                    p {
+                        @include text-m;
+                    }
+
+                    div {
+                        padding-top: 8px;
+                        display: flex;
+                        margin-top: -20px;
+                        @include text-s;
+
+                        i {
+                            color: $warning;
+                        }
+                    }
+                }
+
+                .text-apple {
+                    grid-area: text;
+                    display: grid;
+                    grid-template-rows: 35px 30px;
+
+                    h4 {
+                        @include h4;
+                    }
+
+                    p {
+                        @include text-m;
+                        padding-bottom: -670px;
+                    }
+                }
+
+                .img {
+                    grid-area: button;
+                    padding-top: 10px;
+
+                    img {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .google-play {
+                display: grid;
+                padding-top: 30px;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto;
+                grid-template-areas: "review review" "text button";
+
+                .reviews-google {
+                    grid-area: review;
+                    display: inline-block;
+                    padding-bottom: 10px;
+
+                    p {
+                        @include text-m;
+                    }
+
+                    div {
+                        padding-top: 8px;
+                        display: flex;
+                        margin-top: -20px;
+                        @include text-s;
+
+                        i {
+                            color: $warning;
+                        }
+                    }
+                }
+
+                .text-google {
+                    grid-area: text;
+                    display: grid;
+                    grid-template-rows: 35px 30px;
+
+                    h4 {
+                        @include h4;
+                    }
+
+                    p {
+                        @include text-m;
+                        padding-bottom: -670px;
+                    }
+                }
+
+                .img {
+                    grid-area: button;
+                    padding-top: 10px;
+
+                    img {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
