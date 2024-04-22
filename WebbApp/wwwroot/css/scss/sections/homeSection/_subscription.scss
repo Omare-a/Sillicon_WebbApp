@@ -1,49 +1,59 @@
-#subscription {
+#subscription{
     background-color: $gray-100;
     padding: 80px 0;
-
-    .container {
+    .container{
         padding: 0 15% 0 12%;
         // background-color: red;
-        .title {
+        .title{
             display: flex;
             @include h1;
         }
-
-        form {
-            .sing-up {
-                margin: 2rem 0;
-                display:grid;
-                grid-template-columns: 1fr 3fr;
-
-
-                .option {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr 1fr;
-
-                }
+        .sing-up{
+            display: flex;
+            margin: 30px 0px 50px 0px;
+            justify-content: space-between;
+            h5{
+                @include h5;
+                width: 150px;
             }
 
-            .form-email {
+            form{
+                
                 display: grid;
-                align-content: start;
-                grid-template-columns: 1fr auto;
-                gap:1.5rem;
-                .input-group {
-                    position:relative;
-                    i{
-                        position:absolute;
-                        left:20px;
-                        top:17px;
-                        font-size:1.3rem;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                .input{
+                    display: flex;
+                    align-items: center;
+                    margin-right: 30px;
+                    label{
+                        margin-left: 4px;
                     }
-
-                    input {
-                        padding-left:55px;
-                    }
+                    
                 }
             }
         }
+
+        .subscribe-box{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            .mail-window{
+                background-color: white;
+                border-radius: 10px;
+                border: 1px solid $gray-500;
+                padding: 10px 400px 10px 15px;
+
+                input {
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+            
        
+    
+     
     }
 }
