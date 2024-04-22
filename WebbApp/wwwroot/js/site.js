@@ -11,7 +11,7 @@ function handleProfileImageUpload() {
                     this.form.submit()
                 }
             })
-        } 
+        }
     }
     catch {}
 }
